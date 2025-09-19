@@ -47,12 +47,11 @@
         <div class="requirement-list">
           <div class="requirement-item">
             <h4>1. Dynamic Routes</h4>
-            <p>Create <code>pages/user/_id.vue</code> that displays user information</p>
+            
           </div>
           
           <div class="requirement-item">
             <h4>2. Authentication Middleware</h4>
-            <p>Create <code>middleware/auth.js</code> that redirects unauthenticated users to login</p>
           </div>
           
           <div class="requirement-item">
@@ -72,32 +71,6 @@
         </div>
       </div>
 
-      <div class="hints-section">
-        <h3>💡 Hints</h3>
-        <details>
-          <summary>Click to reveal hints</summary>
-          <ul>
-            <li>Use <code>validate()</code> method in pages to validate route parameters</li>
-            <li>Middleware should check authentication status and redirect if needed</li>
-            <li>Use <code>asyncData()</code> to fetch user data server-side</li>
-            <li>Handle errors with <code>error()</code> method</li>
-            <li>Consider using Vuex for authentication state management</li>
-            <li>Remember to handle both client-side and server-side navigation</li>
-          </ul>
-        </details>
-      </div>
-
-      <div class="file-structure">
-        <h3>📁 Expected File Structure</h3>
-        <pre><code>middleware/
-  └── auth.js
-pages/
-  └── user/
-      ├── _id.vue
-      └── index.vue (user list)
-store/
-  └── auth.js (optional)</code></pre>
-      </div>
     </div>
   </div>
 </template>

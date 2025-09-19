@@ -1,0 +1,16 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/smaj/Developer/ota/live-code-test/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_269c6ec0"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/smaj/Developer/ota/live-code-test/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_46544985"
+  }
+]

@@ -39,26 +39,20 @@ export default {
       elapsedTime: 0
     }
   },
-  
-  // BUG: Wrong lifecycle hook - created() runs before DOM is ready
   created() {
     this.startTime = Date.now()
-    
-    // BUG: Setting up intervals in created() instead of mounted()
     this.setupAutoIncrement()
     this.setupElapsedTimer()
   },
   
   methods: {
     increment() {
-      // BUG: Not properly updating reactive data
       this.count = this.count + 1
     },
     
     toggleAutoMode() {
       this.autoMode = !this.autoMode
       
-      // BUG: Creating multiple intervals without clearing previous ones
       if (this.autoMode) {
         this.setupAutoIncrement()
       }
@@ -69,32 +63,24 @@ export default {
       this.autoMode = false
       this.startTime = Date.now()
       this.elapsedTime = 0
-      
-      // BUG: Not clearing intervals when resetting
     },
     
     setupAutoIncrement() {
-      // BUG: Not storing interval ID for cleanup
       if (this.autoMode) {
         setInterval(() => {
-          // BUG: Incrementing even when autoMode is false
           this.count++
         }, 2000)
       }
     },
     
     setupElapsedTimer() {
-      // BUG: Not storing interval ID for cleanup
       setInterval(() => {
         if (this.startTime) {
-          // BUG: Inefficient calculation on every tick
           this.elapsedTime = Math.floor((Date.now() - this.startTime) / 1000)
         }
       }, 100)
     }
-  }
-  
-  // BUG: Missing cleanup lifecycle hook - memory leaks!
+  } 
 }
 </script>
 

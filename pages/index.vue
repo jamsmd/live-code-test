@@ -8,21 +8,19 @@
         Your Vue.js application is ready to gooo
       </h2>
       <div class="links">
+        <nuxt-link
+          to="/puzzles"
+          class="button--green"
+        >
+          Start Code Puzzles
+        </nuxt-link>
         <a
           href="https://nuxtjs.org/"
           target="_blank"
           rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
           class="button--grey"
         >
-          GitHub
+          Documentation
         </a>
       </div>
     </div>

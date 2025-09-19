@@ -7,6 +7,55 @@
     "_name": "_269c6ec0"
   },
   {
+    "name": "puzzle1",
+    "path": "/puzzle1",
+    "component": "/Users/smaj/Developer/ota/live-code-test/pages/puzzle1.vue",
+    "chunkName": "pages/puzzle1",
+    "_name": "_35aeb5b4"
+  },
+  {
+    "name": "puzzle2",
+    "path": "/puzzle2",
+    "component": "/Users/smaj/Developer/ota/live-code-test/pages/puzzle2.vue",
+    "chunkName": "pages/puzzle2",
+    "_name": "_359286b2"
+  },
+  {
+    "name": "puzzle3",
+    "path": "/puzzle3",
+    "component": "/Users/smaj/Developer/ota/live-code-test/pages/puzzle3.vue",
+    "chunkName": "pages/puzzle3",
+    "_name": "_357657b0"
+  },
+  {
+    "name": "puzzle4",
+    "path": "/puzzle4",
+    "component": "/Users/smaj/Developer/ota/live-code-test/pages/puzzle4.vue",
+    "chunkName": "pages/puzzle4",
+    "_name": "_355a28ae"
+  },
+  {
+    "name": "puzzle5",
+    "path": "/puzzle5",
+    "component": "/Users/smaj/Developer/ota/live-code-test/pages/puzzle5.vue",
+    "chunkName": "pages/puzzle5",
+    "_name": "_353df9ac"
+  },
+  {
+    "name": "puzzle6",
+    "path": "/puzzle6",
+    "component": "/Users/smaj/Developer/ota/live-code-test/pages/puzzle6.vue",
+    "chunkName": "pages/puzzle6",
+    "_name": "_3521caaa"
+  },
+  {
+    "name": "puzzles",
+    "path": "/puzzles",
+    "component": "/Users/smaj/Developer/ota/live-code-test/pages/puzzles.vue",
+    "chunkName": "pages/puzzles",
+    "_name": "_2e6a9730"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/smaj/Developer/ota/live-code-test/pages/index.vue",

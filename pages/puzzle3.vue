@@ -12,7 +12,8 @@
         <h2>🎯 The Problem</h2>
         <p>Build a robust data fetching system that handles various scenarios gracefully:</p>
         <ul>
-          <li>Implement <code>asyncData</code> with proper loading states</li>
+          <li>Build the api endpoints using Nuxt</li>
+          <li>Implement <code>fetching</code> with proper loading states</li>
           <li>Add retry mechanism for failed API requests</li>
           <li>Handle different error types (network, 404, 500, timeout)</li>
           <li>Implement intelligent caching strategy</li>
@@ -91,22 +92,6 @@
             <p>Detect offline status and show appropriate messaging</p>
           </div>
         </div>
-      </div>
-
-      <div class="hints-section">
-        <h3>💡 Hints</h3>
-        <details>
-          <summary>Click to reveal hints</summary>
-          <ul>
-            <li>Use <code>asyncData</code> for server-side data fetching</li>
-            <li>Implement <code>fetch</code> method for client-side updates</li>
-            <li>Use <code>$fetchState</code> to track loading and error states</li>
-            <li>Consider using <code>navigator.onLine</code> for offline detection</li>
-            <li>Implement exponential backoff: delay = baseDelay * (2 ^ retryCount)</li>
-            <li>Use try-catch blocks and proper error classification</li>
-            <li>Cache data in localStorage or Vuex for persistence</li>
-          </ul>
-        </details>
       </div>
 
       <div class="solution-section">

@@ -110,23 +110,6 @@
         </div>
       </div>
 
-      <div class="hints-section">
-        <h3>💡 Hints</h3>
-        <details>
-          <summary>Click to reveal hints</summary>
-          <ul>
-            <li>Use <code>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))</code> for responsive grids</li>
-            <li>Implement mobile-first CSS with <code>min-width</code> media queries</li>
-            <li>Use <code>clamp()</code> for responsive typography</li>
-            <li>Add <code>transition</code> properties for smooth animations</li>
-            <li>Use <code>:focus-visible</code> for better focus indicators</li>
-            <li>Test with screen readers and keyboard navigation</li>
-            <li>Use <code>will-change</code> sparingly for performance</li>
-            <li>Consider <code>contain</code> property for layout optimization</li>
-          </ul>
-        </details>
-      </div>
-
       <div class="accessibility-checklist">
         <h3>♿ Accessibility Checklist</h3>
         <div class="checklist">

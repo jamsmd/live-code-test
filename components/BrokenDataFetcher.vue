@@ -20,17 +20,14 @@
       </button>
     </div>
     
-    <!-- BUG: No loading state shown -->
     <div v-if="loading" class="loading">
       Loading...
     </div>
     
-    <!-- BUG: Poor error handling - all errors shown the same way -->
     <div v-if="error" class="error">
       Error: {{ error }}
     </div>
     
-    <!-- BUG: No offline detection -->
     <div class="data-display">
       <div v-if="users && users.length" class="user-list">
         <h5>Users ({{ users.length }})</h5>
@@ -58,7 +55,6 @@
         <span class="value">{{ cacheStatus }}</span>
       </div>
       
-      <!-- BUG: No offline status -->
       <div class="status-item">
         <span class="label">Network:</span>
         <span class="value">Unknown</span>
@@ -88,18 +84,13 @@ export default {
       this.requestCount++
       
       try {
-        // BUG: No timeout handling
-        // BUG: No retry logic
-        // BUG: No caching
         const response = await fetch(this.selectedEndpoint)
         
-        // BUG: Not checking if response is ok
         const data = await response.json()
         
         this.users = data.users || []
         this.cacheStatus = 'Fresh'
       } catch (err) {
-        // BUG: Generic error handling - not distinguishing error types
         this.error = err.message
         this.cacheStatus = 'Error'
       } finally {
@@ -111,12 +102,7 @@ export default {
       this.users = []
       this.error = null
       this.cacheStatus = 'Empty'
-      // BUG: Not clearing cache
-    }
-    
-    // BUG: No retry mechanism
-    // BUG: No offline detection
-    // BUG: No cache management
+    } 
   }
 }
 </script>

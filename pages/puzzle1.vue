@@ -27,27 +27,6 @@
         </div>
       </div>
 
-      <div class="hints-section">
-        <h3>💡 Hints</h3>
-        <details>
-          <summary>Click to reveal hints</summary>
-          <ul>
-            <li>Check the Vue component lifecycle hooks - are you using the right ones?</li>
-            <li>Look at how reactive data is being handled</li>
-            <li>Make sure to clear intervals when the component is destroyed</li>
-            <li>Consider what happens when auto-mode is toggled multiple times</li>
-            <li>Think about the difference between created(), mounted(), and beforeDestroy()</li>
-          </ul>
-        </details>
-      </div>
-
-      <div class="solution-section">
-        <h3>✅ Expected Behavior</h3>
-        <p>When fixed, your component should work like this reference implementation:</p>
-        <div class="component-wrapper">
-          <WorkingCounter />
-        </div>
-      </div>
     </div>
   </div>
 </template>

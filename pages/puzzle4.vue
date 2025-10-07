@@ -102,22 +102,6 @@ async addItem({ commit }, item) {
         </div>
       </div>
 
-      <div class="hints-section">
-        <h3>💡 Hints</h3>
-        <details>
-          <summary>Click to reveal hints</summary>
-          <ul>
-            <li>Mutations must be synchronous and pure functions</li>
-            <li>Use actions for async operations and business logic</li>
-            <li>Getters are like computed properties for the store</li>
-            <li>Use <code>mapState</code>, <code>mapGetters</code>, <code>mapActions</code> in components</li>
-            <li>For persistence, use plugins or actions with localStorage</li>
-            <li>Implement optimistic updates by committing first, then handling failures</li>
-            <li>Use proper TypeScript types if available</li>
-          </ul>
-        </details>
-      </div>
-
       <div class="expected-api">
         <h3>🌐 Expected Store API</h3>
         <div class="api-section">

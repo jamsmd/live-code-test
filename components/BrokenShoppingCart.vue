@@ -22,7 +22,6 @@
     <div class="cart-section">
       <div class="cart-header">
         <h5>Shopping Cart</h5>
-        <!-- BUG: Not using proper getter -->
         <span class="item-count">({{ cartItems.length }} items)</span>
       </div>
       
@@ -51,7 +50,6 @@
       
       <!-- Cart Total -->
       <div v-if="cartItems.length > 0" class="cart-total">
-        <!-- BUG: Not using getter, calculating in template -->
         <strong>Total: ${{ cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2) }}</strong>
       </div>
       
@@ -92,7 +90,6 @@ export default {
   },
   
   computed: {
-    // BUG: Direct access to state instead of using getters
     cartItems() {
       return this.$store.state.cart.items || []
     }
@@ -100,7 +97,6 @@ export default {
   
   methods: {
     addToCart(product) {
-      // BUG: Direct state mutation instead of using actions
       const existingItem = this.$store.state.cart.items.find(item => item.id === product.id)
       
       if (existingItem) {
@@ -119,7 +115,6 @@ export default {
         return
       }
       
-      // BUG: Direct state mutation
       const item = this.$store.state.cart.items.find(item => item.id === itemId)
       if (item) {
         item.quantity = newQuantity
@@ -127,7 +122,6 @@ export default {
     },
     
     removeFromCart(itemId) {
-      // BUG: Direct state mutation
       const index = this.$store.state.cart.items.findIndex(item => item.id === itemId)
       if (index > -1) {
         this.$store.state.cart.items.splice(index, 1)
@@ -135,12 +129,10 @@ export default {
     },
     
     clearCart() {
-      // BUG: Direct state mutation
       this.$store.state.cart.items = []
     },
     
     async checkout() {
-      // BUG: No proper async action, no error handling
       try {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000))

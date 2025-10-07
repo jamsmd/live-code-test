@@ -340,6 +340,4 @@ export default {
   }
 }
 </style>
-</template>
 
-<parameter name="explanation">Creating the main puzzles overview page that lists all 6 code challenges with descriptions and difficulty levels.

@@ -220,25 +220,6 @@ export default {
         </div>
       </div>
 
-      <div class="hints-section">
-        <h3>💡 Hints</h3>
-        <details>
-          <summary>Click to reveal hints</summary>
-          <ul>
-            <li>Use Chrome DevTools Performance tab to identify bottlenecks</li>
-            <li>Implement <code>v-once</code> for static content</li>
-            <li>Use <code>Object.freeze()</code> for immutable data</li>
-            <li>Consider using Web Workers for heavy computations</li>
-            <li>Implement virtual scrolling for large lists</li>
-            <li>Use <code>requestAnimationFrame</code> for smooth animations</li>
-            <li>Optimize images with modern formats (WebP, AVIF)</li>
-            <li>Use <code>loading="lazy"</code> for native image lazy loading</li>
-            <li>Implement proper error boundaries</li>
-            <li>Use <code>will-change</code> property carefully</li>
-          </ul>
-        </details>
-      </div>
-
       <div class="testing-tools">
         <h3>🔧 Testing Tools</h3>
         <div class="tool-list">

@@ -2,14 +2,11 @@
   <div class="broken-layout">
     <h4>Product Gallery (Broken Layout)</h4>
     
-    <!-- BUG: Poor responsive grid implementation -->
     <div class="product-grid">
       <div v-for="product in products" :key="product.id" class="product-card">
-        <!-- BUG: Images not responsive -->
         <img :src="product.image" :alt="product.name" class="product-image">
         
         <div class="product-info">
-          <!-- BUG: Typography doesn't scale -->
           <h5 class="product-title">{{ product.name }}</h5>
           <p class="product-description">{{ product.description }}</p>
           
@@ -18,7 +15,6 @@
             <span class="rating">★{{ product.rating }}/5</span>
           </div>
           
-          <!-- BUG: No hover states or accessibility -->
           <button class="add-to-cart-btn">
             Add to Cart
           </button>
@@ -26,7 +22,6 @@
       </div>
     </div>
     
-    <!-- BUG: No loading animation -->
     <div v-if="loading" class="loading-state">
       Loading products...
     </div>
@@ -108,63 +103,48 @@ export default {
   color: #e74c3c;
   margin-bottom: 2rem;
   text-align: center;
-  /* BUG: Fixed font size, not responsive */
   font-size: 24px;
 }
 
-/* BUG: Poor grid implementation that breaks on mobile */
 .product-grid {
   display: grid;
-  /* BUG: Fixed column count, doesn't adapt to screen size */
   grid-template-columns: repeat(3, 1fr);
-  /* BUG: Fixed gap size */
   gap: 20px;
   margin-bottom: 2rem;
 }
 
 .product-card {
   background: #fff;
-  /* BUG: No smooth transitions */
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
-  /* BUG: Fixed height causes layout issues */
   height: 400px;
 }
 
-/* BUG: Images not responsive, can overflow */
 .product-image {
   width: 100%;
-  /* BUG: Fixed height */
   height: 200px;
   object-fit: cover;
-  /* BUG: No loading state or error handling */
 }
 
 .product-info {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  /* BUG: No proper spacing */
 }
 
-/* BUG: Typography doesn't scale properly */
 .product-title {
-  /* BUG: Fixed font size */
   font-size: 18px;
   font-weight: 600;
   color: #333;
   margin-bottom: 0.5rem;
-  /* BUG: No text overflow handling */
 }
 
 .product-description {
-  /* BUG: Fixed font size and line height */
   font-size: 14px;
   line-height: 1.4;
   color: #666;
   margin-bottom: 1rem;
-  /* BUG: Text can overflow */
   overflow: hidden;
 }
 
@@ -177,61 +157,38 @@ export default {
 
 .price {
   font-weight: 700;
-  /* BUG: Fixed font size */
   font-size: 16px;
   color: #27ae60;
 }
 
 .rating {
-  /* BUG: Fixed font size */
   font-size: 14px;
   color: #f39c12;
 }
 
-/* BUG: Button with poor accessibility and no hover states */
 .add-to-cart-btn {
   background: #3498db;
   color: white;
   border: none;
-  /* BUG: Fixed padding */
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
-  /* BUG: Fixed font size */
   font-size: 14px;
   font-weight: 500;
-  /* BUG: No transitions */
-  /* BUG: No focus states */
-  /* BUG: Touch target too small for mobile */
 }
 
-/* BUG: Poor loading state styling */
 .loading-state {
   text-align: center;
-  /* BUG: Fixed padding */
   padding: 40px;
   color: #666;
-  /* BUG: Fixed font size */
   font-size: 16px;
-  /* BUG: No loading animation */
 }
 
-/* BUG: No media queries for responsive design */
-/* BUG: No mobile-first approach */
-/* BUG: Missing breakpoints for tablet and mobile */
-
-/* BUG: When screen gets small, layout completely breaks */
 @media (max-width: 600px) {
   /* Minimal and broken responsive styles */
   .product-grid {
-    /* BUG: Still trying to fit 3 columns on mobile */
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* BUG: Missing accessibility styles */
-/* BUG: No focus indicators */
-/* BUG: Poor color contrast */
-/* BUG: No reduced motion preferences */
-/* BUG: No high contrast mode support */
 </style>
